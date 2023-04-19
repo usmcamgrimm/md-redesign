@@ -22,11 +22,15 @@ h1 {
   text-decoration: none;
   color: #333333;
 }
+.top-nav a:hover {
+  color: #00a9e0;
+  border-bottom: 2px solid #00a9e0;
+}
 .top-nav p {
-  padding-right: 1rem;  
+  padding-right: 1.25rem;  
 }
 .top-nav p:last-child {
-  padding-right: 2rem;
+  padding-right: 3rem;
 }
 @media screen and (max-width: 500px) {
   .header img {
