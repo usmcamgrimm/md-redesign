@@ -44,6 +44,10 @@ h1 {
 .navtglbtn {
   margin-left: 12px;
 }
+.dropdowndown-link {
+  font-family: 'Open Sans';
+  font-size: 1rem;
+}
 @media screen and (max-width: 500px) {
   .header img {
     margin: 0 auto;
