@@ -48,6 +48,11 @@ h1 {
   font-family: 'Open Sans';
   font-size: 1rem;
 }
+.img-container {
+  height: 25vw;
+  margin: 0;
+  padding: 0;
+}
 @media screen and (max-width: 500px) {
   .header img {
     margin: 0 auto;
