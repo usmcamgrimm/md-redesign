@@ -11,6 +11,9 @@ h1 {
   max-width: 325px;
   height: auto;
 }
+.img-logo {
+  padding: 0;
+}
 .top-nav {
   font-family: 'Roboto Condensed';
   font-size: 1rem;
@@ -46,6 +49,7 @@ h1 {
 }
 .dropdowndown-link {
   font-size: 1rem;
+  font-family: 'Open Sans';
 }
 .img-container {
   max-width: 50vw;
@@ -68,11 +72,15 @@ img {
   transform: translate(-50%, -50%);
 }
 .overlay-title {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
   color: #ffffff;
 }
 .img-text {
-  font-size: clamp(1rem, 5vw, 24px);
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
   color: #ffffff;
 }
 @media screen and (max-width: 500px) {
@@ -101,6 +109,12 @@ img {
     align-items: center;
   }
   .img-container {
-    max-width: 90%;
+    max-width: 100%;
+  }
+  .secondary {
+    display: none;
+  }
+  .overlay-title {
+    text-align: center;
   }
 }
