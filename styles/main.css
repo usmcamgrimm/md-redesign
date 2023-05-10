@@ -2,11 +2,24 @@ html, body {
   background: #ffffff;
   font-family: 'Open Sans';
 }
+#recentNews {
+  background: #eeeeee;
+}
 h1 {
   font-family: 'Roboto Condensed';
   color: #b1005d;
   font-size: clamp(3rem, 5vw, 2rem);
   margin: 72px 0 1rem 0;
+}
+h2 {
+  font-family: 'Roboto Condensed';
+  color: #b1005d;
+  font-size: clamp(2.5rem, 5vw, 1.75rem);
+}
+h3 {
+  font-family: 'Roboto Condensed';
+  color: #b1005d;
+  font-size: clamp(2rem, 5vw, 1.5rem);
 }
 .header img {
   padding: 1rem 0 1rem 2rem;
@@ -106,19 +119,17 @@ a.img-link-text:hover {
   width: 600px;
   height: 100px;
 }
-.img-wrapper {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.link-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  padding-left: 12px;
+.card-full {
+  box-shadow: 6px 6px 12px 2px rgba(0, 0, 0, 0.3);
+}
+.card-img {
+  width: 319px;
+  height: 199px;
 }
 @media screen and (max-width: 500px) {
   .header img {
