@@ -1,4 +1,4 @@
-html {
+html, body {
   background: #ffffff;
   font-family: 'Open Sans';
 }
@@ -63,7 +63,7 @@ h1 {
   padding: 0;
   position: relative;
 }
-.text-overlay {
+.text-overlay, .img-text-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -76,11 +76,14 @@ h1 {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
   color: #ffffff;
 }
-.img-text {
+.img-text, .img-link-text {
   font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: bold;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
   color: #ffffff;
+}
+a.img-link-text:hover {
+  color: #00a9e0;
 }
 .resources {
   margin-bottom: 64px;
@@ -95,13 +98,19 @@ h1 {
   margin: 0 auto;
   margin-top: 64px;
 }
-.photo-col {
-  padding: -0;
+.photo-link {
   position: relative;
+  margin-bottom: 2rem;
 }
-.img-link, .img-link-top {
+.img-link {
   width: 600px;
   height: 100px;
+}
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .link-overlay {
   position: absolute;
@@ -135,6 +144,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
   .img-container {
     max-width: 100%;
@@ -145,7 +155,21 @@ h1 {
   .overlay-title {
     text-align: center;
   }
-  .img-link-top {
-    padding-bottom: 2.25rem;
+  .photo-links {
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+  .img-link {
+    width: 388px;
+    margin: 0;
+  }
+  .img-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .img-link-text {
+    text-align: center;
   }
 }
