@@ -127,7 +127,7 @@ a.img-link-text:hover {
 .card-full {
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
 }
-.card-img {
+.card-img-vert {
   width: 319px;
   height: 199px;
 }
@@ -150,6 +150,39 @@ a.img-link-text:hover {
 }
 .btn-primary:hover {
   background: #91004b;
+}
+.hc-card {
+  background: #00a9e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hc-month,
+.hc-day {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.hc-month {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+p.card-title {
+  font-family: 'Roboto Condensed';
+  color: #b1005d;
+  font-size: 22px;;
+}
+.learn-more-button {
+  background: #fff;
+  border: none;
+  color: #b1005d;
+}
+.learn-more-button:hover {
+  background: #fff;
+  color: #91004b;
+  border: 2px solid #91004b;
 }
 @media screen and (max-width: 500px) {
   .header img {
