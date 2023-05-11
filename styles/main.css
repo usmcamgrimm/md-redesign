@@ -131,6 +131,12 @@ a.img-link-text:hover {
   width: 319px;
   height: 199px;
 }
+.btn-primary {
+  background: #b1005d;
+}
+.btn-primary:hover {
+  background: #91004b;
+}
 @media screen and (max-width: 500px) {
   .header img {
     margin: 0 auto;
