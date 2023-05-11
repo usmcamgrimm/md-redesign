@@ -125,7 +125,7 @@ a.img-link-text:hover {
   align-items: center;
 }
 .card-full {
-  box-shadow: 6px 6px 12px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
 }
 .card-img {
   width: 319px;
