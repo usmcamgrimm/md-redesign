@@ -153,9 +153,9 @@ a.img-link-text:hover {
 }
 .hc-card {
   background: #00a9e0;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 .hc-month,
 .hc-day {
@@ -172,7 +172,7 @@ a.img-link-text:hover {
 p.card-title {
   font-family: 'Roboto Condensed';
   color: #b1005d;
-  font-size: 22px;;
+  font-size: 22px;
 }
 .learn-more-button {
   background: #fff;
@@ -183,6 +183,9 @@ p.card-title {
   background: #fff;
   color: #91004b;
   border: 2px solid #91004b;
+}
+.card-text {
+  font-size: 12px;
 }
 @media screen and (max-width: 500px) {
   .header img {
