@@ -151,33 +151,48 @@ a.img-link-text:hover {
 .btn-primary:hover {
   background: #91004b;
 }
+.hc-container {
+  margin: 0 auto;
+  width: 80%;
+}
+.hc-body {
+  padding: 4px 0 8px 8px;
+}
 .hc-card {
   background: #00a9e0;
-  /* display: flex;
+  height: 100%;
+  display: flex;
   flex-direction: column;
-  align-items: center; */
+  align-items: center;
+  justify-content: center;
 }
 .hc-month,
 .hc-day {
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  padding: 0;
-  margin: 0;
 }
 .hc-month {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+.event-card-full {
+  padding: 0;
 }
 p.card-title {
   font-family: 'Roboto Condensed';
   color: #b1005d;
   font-size: 22px;
 }
+.card-title,
+.card-text {
+  margin-bottom: 6px;
+}
 .learn-more-button {
   background: #fff;
   border: none;
   color: #b1005d;
+  padding: 2px 4px;
 }
 .learn-more-button:hover {
   background: #fff;
