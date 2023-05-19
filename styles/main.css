@@ -124,7 +124,9 @@ a.img-link-text:hover {
   flex-direction: column;
   align-items: center;
 }
-.card-full {
+.card-full,
+.event-card-full {
+  border: 2px solid rgba(0, 0, 0, 0.15);
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
 }
 .card-img-vert {
@@ -170,6 +172,7 @@ a.img-link-text:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* width: 96px; */
 }
 .hc-month,
 .hc-day {
@@ -198,14 +201,19 @@ p.card-title {
   border: none;
   color: #b1005d;
   padding: 2px 4px;
+  font-size: 1rem;
 }
 .learn-more-button:hover {
+  color: #00a9e0;
   background: #fff;
-  color: #91004b;
-  border: 2px solid #91004b;
+  text-decoration: underline;
 }
 .card-text {
   font-size: 12px;
+}
+.card-divider {
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 @media screen and (max-width: 500px) {
   .header img {
