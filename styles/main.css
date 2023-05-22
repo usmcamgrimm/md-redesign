@@ -215,6 +215,32 @@ p.card-title {
   margin-top: 0;
   margin-bottom: 4px;
 }
+footer {
+  background: #333;
+  color: #fff;
+}
+.footer-logo {
+  max-width: 600px;
+  height: auto;
+}
+.footer-logo-text {
+  font-size: 14px;
+}
+.footer-link {
+  font-size: 14px;
+}
+a.footer-link {
+  color: #fff;
+  text-decoration: none
+}
+a.footer-link:hover {
+  text-decoration: underline;
+  color: #00a9e0;
+}
+.copy-footer {
+  font-size: 12px;
+  color: #eee;
+}
 @media screen and (max-width: 500px) {
   .header img {
     margin: 0 auto;
