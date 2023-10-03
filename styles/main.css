@@ -5,16 +5,11 @@ html, body {
 #recentNews {
   background: #eeeeee;
 }
-h1 {
-  font-family: 'Roboto Condensed';
-  color: #b1005d;
-  font-size: clamp(3rem, 5vw, 2rem);
-  margin: 72px 0 1rem 0;
-}
 h2 {
   font-family: 'Roboto Condensed';
   color: #b1005d;
   font-size: clamp(2.5rem, 5vw, 1.75rem);
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 h3 {
   font-family: 'Roboto Condensed';
@@ -76,6 +71,9 @@ h3 {
   padding: 0;
   position: relative;
 }
+.tessellation-bg {
+  background: #00a9e0;
+}
 .text-overlay, .img-text-overlay {
   position: absolute;
   top: 50%;
@@ -83,8 +81,8 @@ h3 {
   width: 90%;
   transform: translate(-50%, -50%);
 }
-.overlay-title {
-  font-size: clamp(3rem, 5vw, 2rem);
+h1.overlay-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
   color: #ffffff;
