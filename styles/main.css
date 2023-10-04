@@ -37,8 +37,8 @@ h3 {
   color: #333333;
 }
 .top-nav a:hover {
-  color: #00a9e0;
-  border-bottom: 2px solid #00a9e0;
+  color: #b1005d;
+  border-bottom: 2px solid #b1005d;
 }
 .top-nav p {
   padding-right: 1.25rem;  
@@ -47,6 +47,7 @@ h3 {
   padding-right: 3rem;
 }
 .navbar-link {
+  color: #ffffff;
   font-family: 'Roboto Condensed';
   font-size: 20px;
   padding-right: 24px;
@@ -54,12 +55,20 @@ h3 {
 .navbar-link:last-child {
   padding-right: 0;
 }
+.navbar-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
 .navtglbtn {
   margin-left: 12px;
 }
-.dropdowndown-link {
+.dropdown-link {
   font-size: 1rem;
   font-family: 'Open Sans';
+}
+.dropdown-link a:hover {
+  text-decoration: underline;
+  color: #333;
 }
 .img-container {
   width: 100%;
@@ -84,13 +93,13 @@ h3 {
 h1.overlay-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   color: #ffffff;
 }
 .img-text, .img-link-text {
   font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: bold;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   color: #ffffff;
 }
 a.img-link-text:hover {
@@ -140,7 +149,7 @@ a.img-link-text:hover {
   --bs-btn-bg: #b1005d;
   --bs-btn-border-color: #b1005d;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #b1005d;
+  --bs-btn-hover-bg: #91004b;
   --bs-btn-hover-border-color: #91004b;
   --bs-btn-focus-shadow-rgb: 145, 0, 75;
   --bs-btn-active-color: #fff;
