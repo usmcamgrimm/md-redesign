@@ -42,8 +42,8 @@ h3 {
   color: rgb(51, 55, 64);
 }
 .top-nav a:hover {
-  color: rgb(104, 0, 54);
-  border-bottom: 2px solid rgb(104, 0, 54);
+  color: rgb(121, 0, 63);
+  border-bottom: 2px solid rgb(121, 0, 63);
   text-decoration: none;
 }
 .top-nav p {
@@ -155,26 +155,26 @@ a.img-link-text:hover {
   --bs-btn-bg: rgb(156, 0, 81);
   --bs-btn-border-color: rgb(156, 0, 81);
   --bs-btn-hover-color: rgb(255, 255, 255);
-  --bs-btn-hover-bg: rgb(104, 0, 54);
-  --bs-btn-hover-border-color: rgb(104, 0, 54);
+  --bs-btn-hover-bg: rgb(121, 0, 63);
+  --bs-btn-hover-border-color: rgb(121, 0, 63);
   --bs-btn-focus-shadow-rgb: 145, 0, 75;
   --bs-btn-active-color: rgb(255, 255, 255);
-  --bs-btn-active-bg: rgb(104, 0, 54);
-  --bs-btn-active-border-color: rgb(104, 0, 54);
+  --bs-btn-active-bg: rgb(121, 0, 63);
+  --bs-btn-active-border-color: rgb(121, 0, 63);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: rgb(255, 255, 255);
   --bs-btn-disabled-bg: rgb(156, 0, 81);
   --bs-btn-disabled-border-color: rgb(156, 0, 81);
 }
 .btn-primary:hover {
-  background: rgb(104, 0, 54);
+  background: rgb(121, 0, 63);
 }
 .read-button {
   font-size:12px;
   padding: 6px 10px;
 }
 .read-button:hover {
-  background-color: rgb(104, 0, 54);
+  background-color: rgb(121, 0, 63);
 }
 .hc-container {
   margin: 0 auto;
@@ -229,6 +229,22 @@ p.card-title {
 .card-divider {
   margin-top: 0;
   margin-bottom: 4px;
+}
+.btn-secondary {
+  --bs-btn-color: rgb(255, 255, 255);
+  --bs-btn-bg: rgb(0, 178, 238);
+  --bs-btn-border-color: rgb(0, 178, 238);
+  --bs-btn-hover-color: rgb(255, 255, 255);
+  --bs-btn-hover-bg: rgb(0, 138, 185);
+  --bs-btn-hover-border-color: rgb(0, 138, 185);
+  --bs-btn-focus-shadow-rgb: 130, 138, 145;
+  --bs-btn-active-color: rgb(255, 255, 255);
+  --bs-btn-active-bg: rgb(0, 138, 185);
+  --bs-btn-active-border-color: rgb(0, 138, 185);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: rgb(255, 255, 255);
+  --bs-btn-disabled-bg: rgb(0, 178, 238);
+  --bs-btn-disabled-border-color: rgb(0, 178, 238);
 }
 footer {
   background: rgb(51, 55, 64);
