@@ -232,19 +232,19 @@ p.card-title {
 }
 .btn-secondary {
   --bs-btn-color: rgb(255, 255, 255);
-  --bs-btn-bg: rgb(110, 38, 123);
-  --bs-btn-border-color: rgb(110, 38, 123);
+  --bs-btn-bg: #405949;
+  --bs-btn-border-color: #405949;
   --bs-btn-hover-color: rgb(255, 255, 255);
-  --bs-btn-hover-bg: #551d5f;
-  --bs-btn-hover-border-color: #551d5f;
+  --bs-btn-hover-bg: #314538;
+  --bs-btn-hover-border-color: #314538;
   --bs-btn-focus-shadow-rgb: 130, 138, 145;
   --bs-btn-active-color: rgb(255, 255, 255);
-  --bs-btn-active-bg: #551d5f;
-  --bs-btn-active-border-color: #551d5f;
+  --bs-btn-active-bg: #314538;
+  --bs-btn-active-border-color: #314538;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: rgb(255, 255, 255);
-  --bs-btn-disabled-bg: #551d5f;
-  --bs-btn-disabled-border-color: #551d5f;
+  --bs-btn-disabled-bg: #666666;
+  --bs-btn-disabled-border-color: #666666;
 }
 footer {
   background: rgb(71, 75, 85);
