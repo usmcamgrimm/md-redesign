@@ -28,29 +28,21 @@ h3 {
 }
 .img-logo {
   padding: 0;
+  max-width: 250px;
+  height: auto;
 }
 .top-nav {
   font-family: 'RidleyGrotesk-Bold';
   font-size: 1rem;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
+  display: inline-block;
 }
-.top-nav a{
-  text-decoration: underline;
+.top-nav a {
   color: rgb(51, 55, 64);
 }
 .top-nav a:hover {
   color: rgb(121, 0, 63);
   border-bottom: 2px solid rgb(121, 0, 63);
   text-decoration: none;
-}
-.top-nav p {
-  padding-right: 1.25rem;  
-}
-.top-nav p:last-child {
-  padding-right: 3rem;
 }
 .navbar-link {
   color: rgb(255, 255, 255);
@@ -300,6 +292,18 @@ a.footer-link:hover {
 .instagram:hover {
   color: rgb(255, 255, 255);
   background: rgb(150, 47, 191);
+}
+.test-link {
+  font-size: 1.5rem;
+  color: white;
+}
+.test-link a {
+  color: white;
+}
+.test-link a:hover {
+  color: #9c0051;
+  text-decoration: none;
+  border-bottom: 2px solid #9c0051;
 }
 @media screen and (max-width: 500px) {
   .header img {

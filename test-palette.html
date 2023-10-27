@@ -20,17 +20,29 @@
 </head>
 <body>
   <section class="nav-header" id="nav-header">
-    <div class="header">
-      <div class="row">
-        <div class="col-lg-8 col-sm-12 img-logo">
-          <img
-            src="./assets/images/MethodistMD_Logo_Black.png"
-            alt="MethodistMD logo" />
+    <!-- <div class="header"> -->
+    <div class="container">
+      <!-- <div class="row"> -->
+      <div class="row justify-content-between">
+        <!-- <div class="col-lg-8 col-sm-12 img-logo"> -->
+        <div class="col">
+          <a class="navbar-brand" href="test-palette.html">
+            <img
+              src="./assets/images/MethodistMD_Logo_Black.png"
+              class="img-logo img-fluid my-3 mx-0"
+              alt="MethodistMD logo" 
+            />
+          </a>
         </div>
-        <div class="col-lg-4 col-sm-12 top-nav">
-          <p>
-            This is the <b>TEST</b> page. <a href="./index.html">Click here for the dev page using the old styles.</a>
-          </p>
+        <!-- <div class="col-lg-4 col-sm-12 top-nav"> -->
+        <div class="col d-flex justify-content-end">
+          <div class="top-nav">
+            <div class="mb-0 d-flex flex-row">
+              <a href="#" class="d-flex align-items-center justify-content-center mx-3 my-4 text-decoration-none">Apps</a>
+              <a href="#" class="d-flex align-items-center justify-content-center mx-3 my-4 text-decoration-none">Information Technology</a>
+              <a href="#" class="d-flex align-items-center justify-content-center my-4 text-decoration-none">Contact Numbers</a>
+            </div>
+          </div>
           <!-- <p><a href="#">Apps</a></p>
           <p><a href="#">Information Technology</a></p>
           <p><a href="#">Contact Numbers</a></p>
@@ -115,6 +127,12 @@
                   <a class="dropdown-item dropdown-link" href="#">Radiology Forms</a>
                 </div>
               </li>
+              <li>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </li>
             </ul>
           </div>
         </div>
@@ -129,8 +147,8 @@
           <img src="./assets/images/tessellation_low-opacity.png" class="img-fluid img-container" alt="A tessellated design of white hexagons on a blue background">
           <div class="text-overlay">
             <h1 class="overlay-title">Methodist MD</h1>
-            <p class="image-caption img-text">
-              Find important medical and patient forms, access documents, and stay updated with the latest medical staff news.
+            <p class="test-link">
+              This is the <b>PALETTE TEST</b> page. <a href="./index.html">Click here for the dev page using the old styles.</a>
             </p>
           </div>
         </div>
