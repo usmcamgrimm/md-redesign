@@ -6,18 +6,40 @@
   font-family: "RidleyGrotesk-Bold";
   src: url("../assets/fonts/RidleyGrotesk/RidleyGrotesk-Bold.otf") format("opentype");
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
 html, body {
   background: rgb(255, 255, 255);
   font-family: 'RidleyGrotesk-Regular';
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+h1,h2,h3,h4,h5 {
+  font-family: 'RidleyGrotesk-Bold';
 }
 h2 {
-  font-family: 'RidleyGrotesk-Bold';
   color: rgb(156, 0, 81);
   font-size: clamp(2.5rem, 5vw, 1.75rem);
-  font-size: clamp(1rem, 5vw, 2rem);
 }
 h3 {
-  font-family: 'RidleyGrotesk-Bold';
   color: rgb(156, 0, 81);
   font-size: clamp(2rem, 5vw, 1.5rem);
 }
