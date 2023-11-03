@@ -1,0 +1,120 @@
+<header class="nav-header">
+  <div class="container">
+    <div class="row d-flex justify-content-between">
+      <div class="col">
+        <a href="/index" class="navbar-brand">
+          <img
+            src="/application/themes/methodistmd/img/MethodistMD_Logo_Black.png"
+            class="img-logo img-fluid my-3 mx-0"
+            alt="MethodistMD logo"
+          />
+        </a>
+      </div>
+      <div class="col d-flex justify-content-end">
+        <div class="top-nav">
+          <div class="mb-0 d-flex flex-row">
+            <a href="#" class="d-flex align-items-center justify-content-center mx-3 my-4 text-decoration-none">Apps</a>
+            <a href="#" class="d-flex align-items-center justify-content-center mx-3 my-4 text-decoration-none">Information Technology</a>
+            <a href="#" class="d-flex align-items-center justify-content-center my-4 text-decoration-none">Contact Numbers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark #if(!$EDIT_MODE)fixed-top#end" style="background-color: #9c0051">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="container">
+        <ul class="navbar-nav d-flex justify-content-center">
+          <li class="nav-item dropdown navbar-link">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">My MLH Passport</a>
+            <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item dropdown-link" href="#">Link</a>
+              <a class="dropdown-item dropdown-link" href="#">Link</a>
+              <a class="dropdown-item dropdown-link" href="#">Link</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown navbar-link">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item dropdown-link" href="#">News</a>
+              <a class="dropdown-item dropdown-link" href="#">Events</a>
+              <a class="dropdown-item dropdown-link" href="#">Contact Us</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown navbar-link">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Medical Staff Services
+            </a>
+            <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item dropdown-link" href="#">Medical Staff Services</a>
+              <a class="dropdown-item dropdown-link" href="#">Physicians</a>
+              <a class="dropdown-item dropdown-link" href="#">Governance</a>
+              <a class="dropdown-item dropdown-link" href="#">Credentialing</a>
+              <a class="dropdown-item dropdown-link" href="#">Privileges</a>
+              <a class="dropdown-item dropdown-link" href="#">Allied Health Caregivers</a>
+              <a class="dropdown-item dropdown-link" href="#">Contact Us</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown navbar-link">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              oneChart
+            </a>
+            <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item dropdown-link" href="#">Connecting to OneChart</a>
+              <a class="dropdown-item dropdown-link" href="#">Physician Support</a>
+              <a class="dropdown-item dropdown-link" href="#">Physician Office Staff</a>
+              <a class="dropdown-item dropdown-link" href="#">Downtime Order Sets</a>
+              <a class="dropdown-item dropdown-link" href="#">Access Forms</a>
+              <a class="dropdown-item dropdown-link" href="#">Ambulatory Documents</a>
+              <a class="dropdown-item dropdown-link" href="#">Direct Provider List</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown navbar-link">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CME
+            </a>
+            <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item dropdown-link" href="#">CME</a>
+              <a class="dropdown-item dropdown-link" href="#">Conference Schedule and Registration</a>
+              <a class="dropdown-item dropdown-link" href="#">Travel Information</a>
+              <a class="dropdown-item dropdown-link" href="#">Contact Us</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown navbar-link">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resources
+            </a>
+            <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item dropdown-link" href="#">Cardiology Forms</a>
+              <a class="dropdown-item dropdown-link" href="#">HIM Resources</a>
+              <a class="dropdown-item dropdown-link" href="#">Radiology Forms</a>
+            </div>
+          </li>
+          <li>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+      ## <div class="collapse navbar-collapse" id="navbarNav">
+      ##   <ul class="navbar-nav">
+      ##     #set($navobj = $navtool.getNav("/"))
+      ##     #foreach($item in $navobj)
+      ##       <li class="nav-item">
+      ##         <a href="${item.href}" class="nav-link text-uppercase">${item.title}</a>
+      ##       </li>
+      ##     #end
+      ##   </ul>
+      ## </div>
+  </nav>
+</header>
