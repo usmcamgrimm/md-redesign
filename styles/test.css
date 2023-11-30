@@ -121,7 +121,7 @@ h3 {
   color: rgb(255, 255, 255);
 }
 a.img-link-text:hover {
-  color: rgb(0, 178, 238);
+  color: #00b2ee;
 }
 .resources {
   margin-bottom: 64px;
