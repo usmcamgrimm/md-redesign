@@ -1,4 +1,4 @@
-<!-- VTL File: /application/vtl/blogs/blog-listing.vtl -->
+<!-- VTL File: /application/vtl/blog-listing.vtl -->
 
 #set($page = 1)
 
@@ -9,15 +9,15 @@
 #if($request.getParameter("tag"))
   #set($tag = $request.getParameter("tag"))
   #set($hasTag = "true")
-  #set($blogs = $dotcontent.pullPerPage("+contentType:Blog +(conhost:48190c8c-42c4-46af-8d1a-0cd5db894797 conhost:SYSTEM_HOST) +Blog.tags:\"$tag\"", $page, 6,"Blog.postingDate desc"))
+  #set($news = $dotcontent.pullPerPage("+contentType:MdNews +(conhost:48190c8c-42c4-46af-8d1a-0cd5db894797 conhost:SYSTEM_HOST) +MdNews.tags:\"$tag\"", $page, 6,"MdNews.postingDate desc"))
 #else
-  #set($blogs = $dotcontent.pullPerPage("+contentType:Blog +(conhost:48190c8c-42c4-46af-8d1a-0cd5db894797 conhost:SYSTEM_HOST)", $page, 6, "Blog.postingDate desc"))
+  #set($news = $dotcontent.pullPerPage("+contentType:MdNews +(conhost:48190c8c-42c4-46af-8d1a-0cd5db894797 conhost:SYSTEM_HOST)", $page, 6, "MdNews.postingDate desc"))
 #end
 
 #set($resultList = [])
 
 <div class="row">
-  #foreach($con in $blogs)
+  #foreach($con in $news)
     #set($resultdoc = {})
     #set($resultdoc.identifier = ${con.identifier})
     #set($resultdoc.inode = ${con.inode})
@@ -30,11 +30,11 @@
     #set($notUsedValue = $resultList.add($resultdoc))
     <div class="col-lg-4 mb-5">
       <div class="post post-modern post-height">
-        <a class="post-img-wrap" href="/blog/post/$!{con.urlTitle}"><img class="post-img" src="/dA/$con.identifier/image/300h/50q/$con.image.name" alt="$!{con.image.description}" height="300"></a>
+        <a class="post-img-wrap" href="/news/post/$!{con.urlTitle}"><img class="post-img" src="/dA/$con.identifier/image/300h/50q/$con.image.name" alt="$!{con.image.description}" height="300"></a>
         <div class="post-body">
           <div class="post-content">
             #editContentlet($con.inode)
-            <h3 class="post-title"><a href="/blog/post/$!{con.urlTitle}">$!{con.title}</a></h3>
+            <h3 class="post-title"><a href="/news/post/$!{con.urlTitle}">$!{con.title}</a></h3>
             <p class="post-text">$UtilMethods.prettyShortenString("$con.teaser", 120)</p>
           </div>
           <div class="post-bottom-panel">
@@ -62,7 +62,7 @@ $!dotJSON.put("useComponent", "BlogListing")
   <div class="pagination-wrap">
     <nav aria-label="Page navigation">
       <ul class="pagination">
-        #foreach($i in [1..$blogs.totalPages])
+        #foreach($i in [1..$news.totalPages])
           #if($page == $i)
             <li class="page-item active"><a class="page-link" href="?page=$i">$i</a></li>
           #else
