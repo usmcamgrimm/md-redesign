@@ -1,0 +1,11 @@
+<ul>
+#foreach($con in $dotcontent.pull("+contentType:mdNews +(conhost:e6b42720609d1ea1080a3ab04efce121 conhost:SYSTEM_HOST)",10,"mdNews.title"))
+  <li>
+    #if($EDIT_MODE)
+      <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
+    #end
+    <h3><a href="/news-events/news/$!{con.urlTitle}">$!{con.title}</a></h3>
+    <p>$UtilMethods.truncatify($con.summary, 150)</p>
+  </li>
+#end
+</ul>

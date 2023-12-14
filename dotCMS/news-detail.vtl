@@ -1,63 +1,22 @@
-<!-- VTL File: /application/vtl/news-detail.vtl -->
-#if($UtilMethods.isSet($URLMapContent))
-  <div class="section-news-post">
-    <div class="section-news  -post-header">
-      <h1
-        #if ($EDIT_MODE) 
-          data-language="${CONTENT_LANGUAGE}"
-          data-mode="minimal"
-          data-inode="$URLMapContent.inode"
-          data-field-name="title"
-        #end
-      >$URLMapContent.title</h1>
-      <div class="post-bottom-panel">
-        <div>
-          <div class="group-xl">
-            #if( ${URLMapContent.author.size()} > 0)
-              #set ($author= ${URLMapContent.author.get(0)})
-              <div class="post-modern-author">
-                <span class="post-icon icon mdi mdi-account"></span>
-                <span>by $!{author.firstName} $!{author.lastName}</span>
-              </div>
-            #end
-            <div class="post-modern-time">
-              <span class="post-icon icon mdi mdi-calendar-clock"></span>
-              <time datetime="2018-07-20 12:29">$date.format("MMMM dd, yyyy 'at' hh:mm aa", $!{URLMapContent.postingDate})</time>
-            </div>
-          </div>
-        </div>
-        <div class="d-none d-md-block">
-          <div class="group-xl">
-            <div class="post-modern-views">
-              <span class="post-icon icon mdi mdi-eye"></span>
-              <span>193</span>
-            </div>
-          </div>
-        </div>
+#if($UtilMethods.isSet($URLMapContent.identifier))
+<!-- STORY TITLE -->
+<div class="banner" style="background-image: url('/dA/$URLMapContent.identifier/1200w/70q/$URLMapContent.image.name');"></div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="story-detail">
+
+        #editContentlet($URLMapContent.inode)
+        <!-- NEWS TITLE -->
+        <h2 class="story-title">$!{URLMapContent.title}</h2>
+
+        <!-- NEWS BODY -->
+        <div class="story-body">$!{URLMapContent.body}</div>
       </div>
     </div>
-
-    <!-- NEWS IMAGE -->
-    <div class="section-news-post-figure">
-      <!-- <img class="img-fluid" style="min-width: 100%;" src="/dA/$URLMapContent.identifier/935cw/400ch/50q/$URLMapContent.image.name" alt="$URLMapContent.title"> -->
-      <img class="img-fluid" src="/contentAsset/image/$URLMapContent.identifier/image/filter/Resize,Crop/resize_w/935/crop_w/935/crop_h/400/$URLMapContent.image.name" alt="$URLMapContent.title">
-      <span class="badge badge-primary">$!{URLMapContent.tags.get(0)}</span>
-    </div>
-
-    <!-- NEWS BODY -->
-    <div class="section-news-post-content"
-      #if ($EDIT_MODE) 
-        data-language="${CONTENT_LANGUAGE}"
-        data-inode="$URLMapContent.inode"
-        data-field-name="newsContent"
-        data-content-type="MdNews"
-        data-contentlet-identifier="$URLMapContent.identifier"
-        data-block-editor-content="$esc.html($!{URLMapContent.newsContent.content})"
-      #end >
-      $!{URLMapContent.newsContent.toHtml('/application/vtl/news/blocks/')}
-    </div>
   </div>
-
+</div>
 #else
-  <h2>No news</h2>
+  <div class="mt-5 pt-5 text-center"><h2>Sorry we could not find the news story you're looking for.</h2></div>
 #end
