@@ -3,7 +3,7 @@
 <div class="recommended-events">
   <h2 class="text-center text-uppercase">$widgetTitle</h2>
   <div class="row row-40 justify-content-center justify-content-md-start">
-  #foreach($con in $dotcontent.pullPersonalized("-contentType:forms +contentType:story901 +(conhost:132b8ec0892da974b37c705a0fdad5a0 conhost:SYSTEM_HOST)",3,"calendarEvent.startDate"))
+  #foreach($con in $dotcontent.pullPersonalized("-contentType:forms +contentType:Story901 +(conhost:132b8ec0892da974b37c705a0fdad5a0 conhost:SYSTEM_HOST)",3,"Story901.publishDate"))
     <div class="col-8 col-md-6 col-lg-4">
       <div class="post post-classic">
         <a class="post-img-wrap" href="/events/$con.urlTitle">
@@ -13,9 +13,9 @@
         #set($x = $UtilMethods.prettyShortenString("$con.description", 120))
         #set($x = $x.replaceAll("</?[^>]+/?>", ""))
         <p class="post-text">$x</p>
-        <time class="post-classic-time" datetime="$date.format('yyyy-MM-dd h:mm a', ${con.startDate})">
-          <span class="heading-1">$date.format('dd', ${con.startDate})</span>
-            $date.format('MMMM', ${con.startDate})
+        <time class="post-classic-time" datetime="$date.format('yyyy-MM-dd h:mm a', ${con.publishDate})">
+          <span class="heading-1">$date.format('dd', ${con.publishDate})</span>
+            $date.format('MMMM', ${con.publishDate})
         </time>
       </div>
     </div>
