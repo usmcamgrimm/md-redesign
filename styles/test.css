@@ -121,7 +121,7 @@ h3 {
   color: rgb(255, 255, 255);
 }
 a.img-link-text:hover {
-  color: #00b2ee;
+  color: #007797;
 }
 .resources {
   margin-bottom: 64px;
@@ -244,15 +244,15 @@ p.card-title {
 }
 .btn-secondary {
   --bs-btn-color: rgb(255, 255, 255);
-  --bs-btn-bg: #405949;
-  --bs-btn-border-color: #405949;
+  --bs-btn-bg: #007797;
+  --bs-btn-border-color: #007797;
   --bs-btn-hover-color: rgb(255, 255, 255);
-  --bs-btn-hover-bg: #314538;
-  --bs-btn-hover-border-color: #314538;
+  --bs-btn-hover-bg: #005c75;
+  --bs-btn-hover-border-color: #005c75;
   --bs-btn-focus-shadow-rgb: 130, 138, 145;
   --bs-btn-active-color: rgb(255, 255, 255);
-  --bs-btn-active-bg: #314538;
-  --bs-btn-active-border-color: #314538;
+  --bs-btn-active-bg: #005c75;
+  --bs-btn-active-border-color: #005c75;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: rgb(255, 255, 255);
   --bs-btn-disabled-bg: #666666;
@@ -278,7 +278,7 @@ a.footer-link {
 }
 a.footer-link:hover {
   text-decoration: underline;
-  color: rgb(0, 178, 238);
+  color: #007797;
 }
 .copy-footer {
   font-size: 12px;
