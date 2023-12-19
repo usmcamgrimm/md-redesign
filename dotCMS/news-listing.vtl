@@ -1,0 +1,14 @@
+## PULLS THE FULL LIST OF EVENTS SORTED BY PUBLISH DATE
+<h2 class="text-uppercase my-4">featured News</h2>
+<ul>
+#foreach($con in $dotcontent.pull("+contentType:Story901 +(conhost:1c7d1bcd909a5896c4ce1a2cae61a04b conhost:SYSTEM_HOST)",0,"Story901.publishDate"))
+    <li>
+        #if($EDIT_MODE)
+            <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
+        #end
+        <h3><a href="/news/$!{con.urlTitle}">$!{con.title}</a></h3>
+        <h4>$date.format('MMM dd, yyyy',$con.startDate)</h4>
+        <p>$!{con.body}</p>
+    </li>
+#end
+</ul>
