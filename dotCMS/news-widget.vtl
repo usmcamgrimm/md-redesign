@@ -1,65 +1,58 @@
-<!-- VTL File: /application/vtl/news/news-widget.vtl -->
-<!-- The version from 12/18/2023 @ 1439 is trhe last working version that displays anything -->
-<!-- Fixed - DotCMS - Left you a few notes Adrian, hope it helps!  -- Melissa -->
-
-<div class="container-fluid featured-news">
-    
-   ##note: Preferably you should just use $title here - $widgetTitle is typically just for backend use
-  <h2 class="text-center text-uppercase mb-3">$title</h2> 
-  
+<!-- VTL File: /application/vtl/news-widget.vtl -->
+   
+##note: Preferably you should just use $title here - $widgetTitle is typically just for backend use
+<h2 class="text-center text-uppercase my-5 py-3">$title</h2> 
+<div class="container-fluid card-container">
   <div class="row d-flex justify-content-center align-items-center mx-auto">
+    
+    ##note: The sort part of this pull (last section after comma) needed to be in the format "contenttype.fieldname" since it was a field you created and not a default system field    
+    #foreach($con in $dotcontent.pull("+contentType:Story901 +(conhost:1c7d1bcd909a5896c4ce1a2cae61a04b conhost:SYSTEM_HOST)",3,"Story901.publishDate desc"))
+
+      <div class="col mb-5 mx-auto">
+        <div class="card mb-3 card-full" style="width: 320px;">
+        
+          #*
+          https://www.dotcms.com/docs/latest/displaying-images-with-binary-image-fields
+          *#
+          <img class="card-img-top card-img card-img-vert" src="$!{con.image.rawUri}" alt="$!{con.title}" />
       
-  ##note: The sort part of this pull (last section after comma) needed to be in the format "contenttype.fieldname" since it was a field you created and not a default system field    
-  #foreach($con in $dotcontent.pull("+contentType:Story901 +(conhost:1c7d1bcd909a5896c4ce1a2cae61a04b conhost:SYSTEM_HOST)",3,"Story901.publishDate desc"))
-  
-  
-    <div class="col mb-5">
-      <div class="card mb-3 card-full" style="width: 320px;">
-          
-        #*
-        note 1: There was a typo on this line (ending quotation mark on con.title was inside instead of outside curly brace). A code editor that highlights vtl might be useful -- we like vscode :-) 
-        
-        note 2: Image src needed the .rawUri appended to get the file path. This doc might be useful: https://www.dotcms.com/docs/latest/displaying-images-with-binary-image-fields
-        *#
-        <img class="card-img-top card-img card-img-vert" src="$!{con.image.rawUri}" alt="$!{con.title}" />
-        
-        
-        <div class="card-body">
-          #if($EDIT_MODE)
-            <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
-          #end
-          <a class="card-title d-block" href="/news/$!{con.urlTitle}">
-            <h4>$!{con.title}</h4>
-          </a>
-          <div class="d-flex flex-row">
-            <p class="me-1">
-              <small>
-                <em>
-                  $date.format('MMM ',$con.publishDate)
-                </em>
-              </small>
-            </p>
-            <p class="me-1">
-              <small>
-                <em>
-                  $date.format('dd, ',$con.publishDate)
-                </em>
-              </small>
-            </p>
-            <p>
-              <small>
-                <em>
-                  $date.format('yyyy',$con.publishDate)
-                </em>
-              </small>
-            </p>
+      
+          <div class="card-body">
+            #if($EDIT_MODE)
+              <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
+            #end
+            <a class="card-title d-block" href="/news/$!{con.urlTitle}">
+              <h4>$!{con.title}</h4>
+            </a>
+            <div class="d-flex flex-row">
+              <p class="me-1">
+                <small>
+                  <em>
+                    $date.format('MMM ',$con.publishDate)
+                  </em>
+                </small>
+              </p>
+              <p class="me-1">
+                <small>
+                  <em>
+                    $date.format('dd, ',$con.publishDate)
+                  </em>
+                </small>
+              </p>
+              <p>
+                <small>
+                  <em>
+                    $date.format('yyyy',$con.publishDate)
+                  </em>
+                </small>
+              </p>
+            </div>
+            <hr class="card-divider">
+            <p class="card-text">$!{con.summary}</p>
           </div>
-        <hr class="card-divider">
-        <p class="card-text">$!{con.summary}</p>
         </div>
       </div>
-    </div>
-  #end
+    #end
   </div>
   <div class="row row-40 justify-content-center justify-content-lg-start">
     <div class="text-center text-lg-left col-8 col-lg-12">
