@@ -1,22 +1,17 @@
 #if($UtilMethods.isSet($URLMapContent.identifier))
-<!-- STORY TITLE -->
-<div class="banner" style="background-image: url('/dA/$URLMapContent.identifier/1200w/70q/$URLMapContent.image.name');"></div>
+<div class="news-detail">
+    #editContentlet($URLMapContent.inode)
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-12">
-      <div class="story-detail">
+    <!-- NEWS TITLE -->
+    <h2 class="news-title">$!{URLMapContent.title}</h2>
 
-        #editContentlet($URLMapContent.inode)
-        <!-- NEWS TITLE -->
-        <h2 class="story-title">$!{URLMapContent.title}</h2>
+    <!-- PUBLISH DATE -->
+    <h3 class="publish-date">$date.format('MMM dd',$URLMapContent.publishDate)</div>
 
-        <!-- NEWS BODY -->
-        <div class="story-body">$!{URLMapContent.body}</div>
-      </div>
-    </div>
-  </div>
+     <!-- ARTICLE BODY -->
+    <div class="news-body">$!{URLMapContent.body}</div>
+
 </div>
 #else
-  <div class="mt-5 pt-5 text-center"><h2>Sorry we could not find the news story you're looking for.</h2></div>
+    <div class="mt-5 pt-5 text-center"><h2>Sorry we could not find the event you're looking for.</h2></div>
 #end

@@ -21,7 +21,7 @@
             #if($EDIT_MODE)
               <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
             #end
-            <a class="card-title d-block" href="/news/$!{con.urlTitle}">
+            <a class="card-title d-block news-link" href="/news/$!{con.urlTitle}">
               <h4>$!{con.title}</h4>
             </a>
             <div class="d-flex flex-row">
@@ -56,7 +56,7 @@
   </div>
   <div class="row row-40 justify-content-center justify-content-lg-start">
     <div class="text-center text-lg-left col-8 col-lg-12">
-      <a class="btn btn-secondary" href="/events/">View More</a>
+      <a class="btn btn-secondary" href="/news/">View More</a>
     </div>
   </div>
 </div>
