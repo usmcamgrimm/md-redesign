@@ -217,10 +217,11 @@ a.img-link-text:hover {
 .event-card-full {
   padding: 0;
 }
+h4.card-title,
 p.card-title {
   font-family: 'RidleyGrotesk-Bold';
   color: rgb(156, 0, 81);
-  font-size: 22px;
+  font-size: clamp(22px, 5vw, 14px);
 }
 .card-text {
   margin-bottom: 10px;
