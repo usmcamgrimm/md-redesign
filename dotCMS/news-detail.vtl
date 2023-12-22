@@ -1,17 +1,22 @@
 #if($UtilMethods.isSet($URLMapContent.identifier))
-<div class="news-detail">
-    #editContentlet($URLMapContent.inode)
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="news-detail">
 
-    <!-- NEWS TITLE -->
-    <h2 class="news-title">$!{URLMapContent.title}</h2>
+        #editContentlet($URLMapContent.inode)
+        <!-- NEWS TITLE -->
+        <h2 class="news-title">$!{URLMapContent.title}</h2>
 
-    <!-- PUBLISH DATE -->
-    <h3 class="publish-date">$date.format('MMM dd',$URLMapContent.publishDate)</div>
+        <!-- PUBLISH DATE -->
+        <h3 class="publish-date">$date.format('MMM dd',$URLMapContent.publishDate)</div>
 
-     <!-- ARTICLE BODY -->
-    <div class="news-body">$!{URLMapContent.body}</div>
-
+        <!-- ARTICLE BODY -->
+        <div class="news-body">$!{URLMapContent.body}</div>
+      </div>
+    </div>
+  </div>
 </div>
 #else
-    <div class="mt-5 pt-5 text-center"><h2>Sorry we could not find the event you're looking for.</h2></div>
+  <div class="mt-5 pt-5 text-center"><h2>Sorry we could not find the event you're looking for.</h2></div>
 #end
