@@ -1,0 +1,34 @@
+## PULLS A LIST OF EVENTS SORTED BY PUBLISH DATE
+
+<h2 class="text-center mt-5 mb-3">UPCOMING EVENTS</h2>
+<div class="row">
+    #foreach($con in $dotcontent.pull("+contentType:Events901 +(conhost:e6b42720609d1ea1080a3ab04efce121 conhost:SYSTEM_HOST)",4,"Events901.starterDate"))
+        <div class="col-lg-6">
+            <div class="card mb-3 event-card-full" style="max-width: 580px;">
+                <div class="row g-0">
+                    <div class="col-2">
+                        <div class="hc-card">
+                            <p class="hc-month">$date.format('MMM',$con.startDate)</p>
+                            <p class="hc-day">$date.format('dd',$con.startDate)</p>
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="card-body hc-body">
+                                #if($EDIT_MODE)
+                                    <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
+                                #end
+                            <a class="card-title d-block" href="/events/upcoming/$!{con.urlTitle}">$!{con.title}</a>
+                            <hr class="card-divider">
+                            <p class="card-text">$!{con.description}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    #end
+    <div class="row row-40 justify-content-center justify-content-lg-start">
+      <div class="text-center text-lg-left col-8 col-lg-12">
+        <a class="btn btn-secondary" href="/events/">View More</a>
+      </div>
+    </div>
+</div>
