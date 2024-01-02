@@ -1,0 +1,14 @@
+## PULLS THE FULL LIST OF EVENTS SORTED BY PUBLISH DATE
+<h2 class="text-uppercase my-4">Upcoming Events</h2>
+<ul>
+#foreach($con in $dotcontent.pull("+contentType:Events901 +(conhost:e6b42720609d1ea1080a3ab04efce121 conhost:SYSTEM_HOST)",0,"Events901.starterDate"))
+    <li>
+        #if($EDIT_MODE)
+            <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
+        #end
+        <h3><a href="/events/$!{con.urlTitle}">$!{con.title}</a></h3>
+        <h4>$date.format('MMM dd, yyyy',$con.startDate)</h4>
+        <p>$!{con.description}</p>
+    </li>
+#end
+</ul>

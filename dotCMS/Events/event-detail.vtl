@@ -1,0 +1,22 @@
+#if($UtilMethods.isSet($URLMapContent.identifier))
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="event-detail">
+
+        #editContentlet($URLMapContent.inode)
+        <!-- Event TITLE -->
+        <h2 class="event-title">$!{URLMapContent.title}</h2>
+
+        <!-- START DATE -->
+        <h3>$date.format('MMM dd, yyyy',$con.startDate)</h3>
+
+        <!-- EVENT BODY -->
+        <p>$!{URLMapContent.description}</p>
+      </div>
+    </div>
+  </div>
+</div>
+#else
+  <div class="mt-5 pt-5 text-center"><h2>Sorry we could not find the event you're looking for.</h2></div>
+#end
