@@ -1,6 +1,6 @@
 ## PULLS A LIST OF EVENTS SORTED BY PUBLISH DATE
 
-<h2 class="text-center mt-5 mb-3">UPCOMING EVENTS</h2>
+<h2 class="text-center my-5 py-3">UPCOMING EVENTS</h2>
 <div class="row">
     #foreach($con in $dotcontent.pull("+contentType:Events901 +(conhost:e6b42720609d1ea1080a3ab04efce121 conhost:SYSTEM_HOST)",4,"Events901.starterDate"))
         <div class="col-lg-6">
@@ -26,9 +26,9 @@
             </div>
         </div>
     #end
-    <div class="row row-40 justify-content-center justify-content-lg-start">
-      <div class="text-center text-lg-left col-8 col-lg-12">
+</div>
+<div class="row d-flex justify-content-center my-5">
+    <div class="text-center text-lg-left col-8 col-lg-12">
         <a class="btn btn-secondary" href="/about/events/">View More</a>
-      </div>
     </div>
 </div>
