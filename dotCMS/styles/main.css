@@ -1,53 +1,30 @@
 @font-face {
   font-family: "RidleyGrotesk-Regular";
-  src: url("../assets/fonts/RidleyGrotesk/RidleyGrotesk-Regular.otf") format("opentype");
+  src: url("../fonts/RidleyGrotesk-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "RidleyGrotesk-Bold";
-  src: url("../assets/fonts/RidleyGrotesk/RidleyGrotesk-Bold.otf") format("opentype");
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-* {
-  margin: 0;
-  padding: 0;
+  src: url("../fonts/RidleyGrotesk-Bold.otf") format("opentype");
 }
 html, body {
   background: rgb(255, 255, 255);
   font-family: 'RidleyGrotesk-Regular';
-  height: 100%;
-}
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-input, button, textarea, select {
-  font: inherit;
-}
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-h1,h2,h3,h4,h5 {
-  font-family: 'RidleyGrotesk-Bold';
-}
-h1.banner-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  color: rgb(156, 0, 81);
 }
 h2 {
-  color: #9c0051;
+  font-family: 'RidleyGrotesk-Bold';
+  color: rgb(156, 0, 81);
   font-size: clamp(2.5rem, 5vw, 1.75rem);
 }
 h3 {
+  font-family: 'RidleyGrotesk-Bold';
   color: rgb(156, 0, 81);
   font-size: clamp(2rem, 5vw, 1.5rem);
+}
+h4.card-title {
+  font-family: 'RidleyGrotesk-Bold';
+  color: rgb(156, 0, 81);
+  font-size: clamp(24px, 5vw, 14px);
+  font-weight: bold;
 }
 .header img {
   padding: 1rem 0 1rem 2rem;
@@ -61,21 +38,25 @@ h3 {
 }
 .top-nav {
   font-family: 'RidleyGrotesk-Bold';
-  font-size: 1rem;
+  font-size: 12px;
   display: inline-block;
 }
 .top-nav a {
   color: rgb(51, 55, 64);
+  border-bottom: 2px solid #ffffff;
 }
 .top-nav a:hover {
   color: rgb(121, 0, 63);
   border-bottom: 2px solid rgb(121, 0, 63);
   text-decoration: none;
 }
+.navbar {
+  margin-bottom: 3rem;
+}
 .navbar-link {
   color: rgb(255, 255, 255);
   font-family: 'RidleyGrotesk-Bold';
-  font-size: 20px;
+  font-size: 1rem;
   padding-right: 24px;
 }
 .navbar-link:last-child {
@@ -97,15 +78,28 @@ h3 {
   color: rgb(51, 55, 64);
 }
 .banner-header {
-  background-image: url("../assets/images/tessellation_blue.png");
+  background-image: url("/application/themes/methodistmd/img/test_tessellation_blue.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
   padding: 1.5rem 0 1rem 0;
   margin-top: 120px;
 }
-.banner-text {
-  color: rgb(156, 0, 81);
+.img-container {
+  max-width: 100%;
+  height: 80%;
+  overflow: hidden;
+  padding: 0;
+}
+.img-col {
+  padding: 0;
+  position: relative;
+  width: 600px;
+  margin-top: 48px;
+}
+.img-banner {
+  z-index: -1;
+  width: 800px;
 }
 .text-overlay, .img-text-overlay {
   position: absolute;
@@ -114,8 +108,19 @@ h3 {
   width: 90%;
   transform: translate(-50%, -50%);
 }
+h1.banner-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  color: rgb(156, 0, 81);
+}
+.banner-text {
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  font-weight: bold;
+  color: rgb(156, 0, 81);
+}
 .img-text, .img-link-text {
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(1rem, 5vw, 1.25rem);
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   color: rgb(255, 255, 255);
@@ -128,7 +133,7 @@ a.img-link-text:hover {
 }
 .phys-text {
   font-family: 'RidleyGrotesk-Regular';
-  font-size: clamp(1.25rem, 5vw, 1rem);
+  font-size: clamp(1rem, 5vw, 1.25rem);
   padding: 0;
   margin: 0;
 }
@@ -161,8 +166,16 @@ a.img-link-text:hover {
   width: 319px;
   height: 199px;
 }
+.news-link a {
+  color: #00b2ee;
+  text-decoration: none;
+}
+.news-link a:hover {
+    color: #005c75;
+    border-bottom: 2px solid #008ab9;
+}
 .btn-primary {
-  background: rgb(156, 0, 81);
+  background: #9c0051;
   --bs-btn-color: rgb(255, 255, 255);
   --bs-btn-bg: rgb(156, 0, 81);
   --bs-btn-border-color: rgb(156, 0, 81);
@@ -217,11 +230,10 @@ a.img-link-text:hover {
 .event-card-full {
   padding: 0;
 }
-h4.card-title,
 p.card-title {
   font-family: 'RidleyGrotesk-Bold';
   color: rgb(156, 0, 81);
-  font-size: clamp(22px, 5vw, 14px);
+  font-size: 22px;
 }
 .card-text {
   margin-bottom: 10px;
@@ -242,6 +254,11 @@ p.card-title {
 .card-divider {
   margin-top: 0;
   margin-bottom: 4px;
+}
+.event-date {
+  font-size: clamp(1.5, 5vw, 12px);
+  font-weight: bold;
+  color: #333740;
 }
 .btn-secondary {
   --bs-btn-color: rgb(255, 255, 255);
@@ -279,7 +296,7 @@ a.footer-link {
 }
 a.footer-link:hover {
   text-decoration: underline;
-  color: #007797;
+  color: #00b2ee;
 }
 .copy-footer {
   font-size: 12px;
@@ -345,13 +362,13 @@ a.footer-link:hover {
   .top-nav p:last-child {
     padding-right: 0px;
   }
-  .img-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
+  /*.img-col {*/
+  /*  display: flex;*/
+  /*  flex-direction: column;*/
+  /*  justify-content: center;*/
+  /*  align-items: center;*/
+  /*  padding: 0;*/
+  /*}*/
   .img-container {
     max-width: 100%;
   }

@@ -1,0 +1,51 @@
+// LAYOUT GLOBAL
+main {
+    margin-top: -6rem;
+    min-height: calc(100vh - 390px);
+}
+
+//Banner
+.banner {
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+}
+
+// EVENT CARD
+.event-card-full {
+    max-width: 600px;
+    .card-title {
+      font-family: 'RidleyGrotesk-Bold';
+      text-transform: uppercase;
+      color: #00b2ee;
+      font-size: 1rem;
+      &:hover {
+          text-decoration: underline; 
+      }
+    }
+}
+
+// STORY CARD
+.card {
+    text-decoration: none;;
+    p.news-text {
+        color: #333740 !important;
+    }
+}
+// NAVIGATION
+.navbar-brand {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    img {
+        max-width: 100%;
+    }
+}
+
+
+@media (min-width: $grid-breakpoints-lg) {
+    .navbar-brand {
+        width: 180px;
+        height: 180px;
+    }
+}
