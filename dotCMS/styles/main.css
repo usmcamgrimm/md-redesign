@@ -276,6 +276,14 @@ p.card-title {
   --bs-btn-disabled-bg: #666666;
   --bs-btn-disabled-border-color: #666666;
 }
+.cont-dept-text a {
+  color: #333740;
+  text-decoration: none;
+}
+.cont-dept-text a:hover {
+  color: #9c0051;
+  text-decoration: underline;
+}
 footer {
   background: rgb(71, 75, 85);
   color: rgb(255, 255, 255);
