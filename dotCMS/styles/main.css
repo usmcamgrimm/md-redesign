@@ -10,6 +10,11 @@ html, body {
   background: rgb(255, 255, 255);
   font-family: 'RidleyGrotesk-Regular';
 }
+h1 {
+  font-family: 'RidleyGrotesk-Bold';
+  color: rgb(156, 0, 81);
+  font-size: clamp(2.75rem, 5vw, 2rem);
+}
 h2 {
   font-family: 'RidleyGrotesk-Bold';
   color: rgb(156, 0, 81);
