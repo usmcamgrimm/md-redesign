@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/test.css">
+  <title>Conferences</title>
+</head>
+<body>
+  <div class="container mt-3">
+    <h1 class="text-left mt-5">Conference Schedule and Registration</h1>
+    <h2 class="text-center mt-5">
+      Upcoming Events
+    </h2>
+    ## PULLS THE FULL LIST OF EVENTS SORTED BY PUBLISH DATE
+<h2 class="text-uppercase my-4">Upcoming Events</h2>
+<ul>
+#foreach($con in $dotcontent.pull("+contentType:Events901 +(conhost:e6b42720609d1ea1080a3ab04efce121 conhost:SYSTEM_HOST)",0,"Events901.starterDate"))
+    <li>
+        #if($EDIT_MODE)
+            <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
+        #end
+        <h3><a href="/about/events/$!{con.urlTitle}">$!{con.title}</a></h3>
+        <h4>$date.format('MMM dd, yyyy',$con.startDate)</h4>
+        <p>$!{con.description}</p>
+    </li>
+#end
+</ul>
+  </div>  
+</body>
+</html>
