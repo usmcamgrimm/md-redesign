@@ -6,7 +6,7 @@
         #if($EDIT_MODE)
             <div style="float: right;margin-right: 30px;">#editContentlet($con.inode)</div>
         #end
-        <h3><a href="/events/$!{con.urlTitle}">$!{con.title}</a></h3>
+        <h3><a href="/about/events/$!{con.urlTitle}">$!{con.title}</a></h3>
         <h4>$date.format('MMM dd, yyyy',$con.startDate)</h4>
         <p>$!{con.description}</p>
     </li>
