@@ -1,0 +1,27 @@
+.rd-navbar-wrap
+.rd-navbar
+.rd-navbar-static
+.rd-navbar-classic
+.rd-navbar-fixed
+.rd-navbar-collapse-toggle
+.rd-navbar-fixed-element-1
+.rd-navbar-main-outer
+.rd-navbar-main
+.rd-navbar-panel
+.rd-navbar-toggle
+.rd-navbar-brand
+.brand
+.brand-logo-dark
+.rd-navbar-main-element
+.rd-navbar-nav-wrap
+.rd-navbar-nav
+.rd-nav-item
+.rd-nav-link
+.rd-navbar--has-dropdown
+.rd-navbar-submenu
+.rd-menu
+.rd-navbar-dropdown {
+    padding: 1rem 2rem !important;
+}
+.rd-dropdown-item
+.rd-dropdown-link
