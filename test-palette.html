@@ -19,126 +19,120 @@
   <title>HOME | MethodistMD</title>
 </head>
 <body>
-  <section class="nav-header" id="nav-header">
-    <!-- <div class="header"> -->
+  <header class="nav-header">
     <div class="container">
-      <!-- <div class="row"> -->
-      <div class="row justify-content-between">
-        <!-- <div class="col-lg-8 col-sm-12 img-logo"> -->
+      <div class="row d-flex justify-content-between">
         <div class="col">
-          <a class="navbar-brand" href="test-palette.html">
-            <img
-              src="./assets/images/MethodistMD_Logo_Black.png"
+          <a href="/index" class="navbar-brand">
+            <!-- <img
+              src="/application/themes/methodistmd/img/MethodistMD_Logo_Black.png"
               class="img-logo img-fluid my-3 mx-0"
-              alt="MethodistMD logo" 
+              alt="MethodistMD logo"
+            /> -->
+            <img
+              src="../../../../assets/images/MethodistMD_Logo_Black.png"
+              class="img-logo img-fluid my-3 mx-0"
+              alt="MethodistMD logo"
             />
           </a>
         </div>
-        <!-- <div class="col-lg-4 col-sm-12 top-nav"> -->
-        <div class="col d-flex justify-content-end">
+        <div class="col d-flex justify-content-end align-items-center">
           <div class="top-nav">
             <div class="mb-0 d-flex flex-row">
-              <a href="#" class="d-flex align-items-center justify-content-center mx-3 my-4 text-decoration-none">Apps</a>
-              <a href="#" class="d-flex align-items-center justify-content-center mx-3 my-4 text-decoration-none">Information Technology</a>
-              <a href="#" class="d-flex align-items-center justify-content-center my-4 text-decoration-none">Contact Numbers</a>
+              <a href="#" class="mx-3 my-4 text-decoration-none text-black">Apps</a>
+              <a href="#" class="mx-3 my-4 text-decoration-none text-black">Information Technology</a>
+              <a href="#" class="my-4 text-decoration-none text-black">Contact Numbers</a>
             </div>
           </div>
-          <!-- <p><a href="#">Apps</a></p>
-          <p><a href="#">Information Technology</a></p>
-          <p><a href="#">Contact Numbers</a></p>
-          <p><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></p> -->
         </div>
       </div>
     </div>
-    <div class="container-fluid p-0">
-      <div class="navbar navbar-dark navbar-expand-md" style="background-color: #9c0051">
-        <button class="navbar-toggler navtglbtn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark #if(!$EDIT_MODE)fixed-top#end" style="background: #9c0051">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMD" aria-controls="navbarMD" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <div class="container">
-            <ul class="navbar-nav d-flex justify-content-center">
-              <li class="nav-item dropdown navbar-link">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  My MLH Passport
-                </a>
-                <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item dropdown-link" href="#">Link</a>
-                  <a class="dropdown-item dropdown-link" href="#">Link</a>
-                  <a class="dropdown-item dropdown-link" href="#">Link</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown navbar-link">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  About
-                </a>
-                <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item dropdown-link" href="#">News</a>
-                  <a class="dropdown-item dropdown-link" href="#">Events</a>
-                  <a class="dropdown-item dropdown-link" href="#">Contact Us</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown navbar-link">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Medical Staff Services
-                </a>
-                <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item dropdown-link" href="#">Medical Staff Services</a>
-                  <a class="dropdown-item dropdown-link" href="#">Physicians</a>
-                  <a class="dropdown-item dropdown-link" href="#">Governance</a>
-                  <a class="dropdown-item dropdown-link" href="#">Credentialing</a>
-                  <a class="dropdown-item dropdown-link" href="#">Privileges</a>
-                  <a class="dropdown-item dropdown-link" href="#">Allied Health Caregivers</a>
-                  <a class="dropdown-item dropdown-link" href="#">Contact Us</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown navbar-link">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  oneChart
-                </a>
-                <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item dropdown-link" href="#">Connecting to OneChart</a>
-                  <a class="dropdown-item dropdown-link" href="#">Physician Support</a>
-                  <a class="dropdown-item dropdown-link" href="#">Physician Office Staff</a>
-                  <a class="dropdown-item dropdown-link" href="#">Downtime Order Sets</a>
-                  <a class="dropdown-item dropdown-link" href="#">Access Forms</a>
-                  <a class="dropdown-item dropdown-link" href="#">Ambulatory Documents</a>
-                  <a class="dropdown-item dropdown-link" href="#">Direct Provider List</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown navbar-link">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  CME
-                </a>
-                <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item dropdown-link" href="#">CME</a>
-                  <a class="dropdown-item dropdown-link" href="#">Conference Schedule and Registration</a>
-                  <a class="dropdown-item dropdown-link" href="#">Travel Information</a>
-                  <a class="dropdown-item dropdown-link" href="#">Contact Us</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown navbar-link">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Resources
-                </a>
-                <div class="dropdown-menu dropdown-link" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item dropdown-link" href="#">Cardiology Forms</a>
-                  <a class="dropdown-item dropdown-link" href="#">HIM Resources</a>
-                  <a class="dropdown-item dropdown-link" href="#">Radiology Forms</a>
-                </div>
-              </li>
-              <li>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-              </li>
-            </ul>
-          </div>
+
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarMD">
+          <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                My MLH Passport
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                <li><a class="dropdown-item" href="#">Link 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">News</a></li>
+                <li><a class="dropdown-item" href="#">Events</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Medical Staff Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Medical Staff Services</a></li>
+                <li><a class="dropdown-item" href="#">Physicians</a></li>
+                <li><a class="dropdown-item" href="#">Governance</a></li>
+                <li><a class="dropdown-item" href="#">Credentialing</a></li>
+                <li><a class="dropdown-item" href="#">Privileges</a></li>
+                <li><a class="dropdown-item" href="#">Aliied Health Caregivers</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                OnceChart
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Connecting to OneChart</a></li>
+                <li><a class="dropdown-item" href="#">Physician Support</a></li>
+                <li><a class="dropdown-item" href="#">Physician Office Staff</a></li>
+                <li><a class="dropdown-item" href="#">Downtime Order Sets</a></li>
+                <li><a class="dropdown-item" href="#">Access Forms</a></li>
+                <li><a class="dropdown-item" href="#">Ambulatory Documents</a></li>
+                <li><a class="dropdown-item" href="#">Direct Provider Lists</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CME
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">CME</a></li>
+                <li><a class="dropdown-item" href="#">Conferences</a></li>
+                <li><a class="dropdown-item" href="#">Travel Information</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resources
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Cardiology Forms</a></li>
+                <li><a class="dropdown-item" href="#">HIM Resources</a></li>
+                <li><a class="dropdown-item" href="#">Radiology Forms</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
         </div>
       </div>
-    </div>
-  </section>
+    </nav> 
+  </header>
 
   <section id="heroBanner">
     <div class="container-fluid">
