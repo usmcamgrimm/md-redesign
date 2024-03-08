@@ -342,20 +342,6 @@ a.footer-link:hover {
     justify-content: center;
     margin-bottom: 12px;
   }
-  /* .top-nav {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 8px 0 4px 0;
-    padding: 0;
-  }
-  .top-nav p {
-    padding-right: 8px;  
-  }
-  .top-nav p:last-child {
-    padding-right: 0px;
-  } */
   .img-col {
     display: flex;
     flex-direction: column;
