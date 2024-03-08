@@ -59,13 +59,18 @@ h3 {
   max-width: 250px;
   height: auto;
 }
+.top-nav-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .top-nav {
   font-family: 'RidleyGrotesk-Bold';
   font-size: 1rem;
-  display: inline-block;
 }
 .top-nav a {
   color: rgb(51, 55, 64);
+  text-decoration: none;
 }
 .top-nav a:hover {
   color: rgb(121, 0, 63);
@@ -326,12 +331,18 @@ a.footer-link:hover {
   text-decoration: none;
   border-bottom: 2px solid #9c0051;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .header img {
     margin: 0 auto;
     padding: 1rem 0 12px 0;
   }
-  .top-nav {
+  .top-nav-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  /* .top-nav {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -344,7 +355,7 @@ a.footer-link:hover {
   }
   .top-nav p:last-child {
     padding-right: 0px;
-  }
+  } */
   .img-col {
     display: flex;
     flex-direction: column;
